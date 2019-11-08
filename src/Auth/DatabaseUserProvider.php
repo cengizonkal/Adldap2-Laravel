@@ -74,7 +74,7 @@ class DatabaseUserProvider extends EloquentUserProvider
                     // and our validation rules.
                     Bus::dispatch(new SyncPassword($model, $credentials));
 
-                    $model->save();
+                    //$model->save();
 
                     if ($model->wasRecentlyCreated) {
                         // If the model was recently created, they

@@ -57,9 +57,7 @@ class UserImportScope implements Scope
     {
         // We'll try to locate the user by their object guid,
         // otherwise we'll locate them by their username.
-        $query
-            ->where(Resolver::getDatabaseIdColumn(), '=', $this->getGuid())
-            ->orWhere(Resolver::getDatabaseUsernameColumn(), '=', $this->getUsername());
+        $query->where(Resolver::getDatabaseUsernameColumn(), '=', $this->getUsername());
     }
 
     /**
